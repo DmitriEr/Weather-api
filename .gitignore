@@ -6,3 +6,5 @@ npm-debug*
 # Untracked general purpose directories:
 dist
 node_modules
+Env.js
+Env

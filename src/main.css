@@ -1,0 +1,34 @@
+@import '~antd/dist/antd.css';
+
+body {
+  padding: 0px;
+  margin: 0px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(235, 225, 225);
+}
+
+
+.wether__city {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.weather__cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.weather__card {
+  height: 120px;
+  font-size: 20px;
+}
+
+.weather__card:hover {
+  cursor: pointer;
+}
+
