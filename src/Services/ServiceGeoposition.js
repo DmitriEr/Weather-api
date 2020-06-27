@@ -1,10 +1,10 @@
-import { tokenPosition } from '../Env/Env';
+import { token } from '../Env/Env';
 
-const link = 'http://api.ipstack.com/5.164.180.194';
+const link = 'https://ipinfo.io';
 
-async function getPosition() {
+async function getCurrentPosition() {
   try {
-    const url = `${link}?access_key=${tokenPosition}`;
+    const url = `${link}?token=${token}`;
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -18,4 +18,4 @@ async function getPosition() {
   }
 }
 
-export default getPosition;
+export default getCurrentPosition;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Layout } from 'antd';
 import Day from './Components/Card';
-import getPosition from './Services/Geolocation';
+import getCurrentPosition from './Services/ServiceGeoposition';
 import getWeather from './Services/ServiceWeather';
 import './main.css';
 
@@ -10,9 +10,12 @@ const App = () => {
   const [place, setPlace] = useState('');
 
   useEffect(() => {
-    getPosition().then((value) => {
-      const { latitude, longitude, city } = value;
+    getCurrentPosition().then((value) => {
+      const { loc, city } = value;
       setPlace(city);
+      const path = loc.split(',');
+      const latitude = path[0];
+      const longitude = path[1];
       getWeather(latitude, longitude).then((weather) => {
         setResult(weather);
       });
