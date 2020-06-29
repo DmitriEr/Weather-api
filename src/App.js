@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Layout } from 'antd';
-import Day from './Components/Card';
+import Day from './Components/Day';
 import getCurrentPosition from './Services/ServiceGeoposition';
 import getWeather from './Services/ServiceWeather';
 import './main.css';
